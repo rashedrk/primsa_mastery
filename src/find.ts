@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 const main = async () => {
-    const getAllDataFromDB = await prisma.post.findMany({});
+    const getAllDataFromDB = await prisma.post.findMany();
 
     const findFirst = await prisma.post.findFirst({
         where: {
