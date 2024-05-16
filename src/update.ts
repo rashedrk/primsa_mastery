@@ -21,6 +21,19 @@ const update = async () => {
             published: true
         }
     })
+
+    const upsertData = await prisma.post.upsert({
+        where: {
+            id: 7
+        },
+        update: {
+            published: true
+        },
+        create: {
+            title: 'title 2',
+            content: 'content',
+        }
+    })
     
 };
 
